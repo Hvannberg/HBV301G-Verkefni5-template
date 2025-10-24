@@ -1,0 +1,59 @@
+name: PR Quality Check
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  validate:
+    name: Staðfesta PR sjálfsmat
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+      contents: read
+
+    steps:
+      - name: Skoða PR lýsingu
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = (context.payload.pull_request.body || "").trim();
+            const lc = body.toLowerCase();
+
+            // 1) Spurningarnar verða að vera til staðar í PR-lýsingu
+            const mustPhrases = [
+              "uppfyllir atriðið matskvarða",
+              "er textinn læsilegur og réttur"
+              // ATH: "Hvað má betur fara" er EKKI krafist í body (á að fara í comment)
+            ];
+
+            const missingPhrases = mustPhrases.filter(p => !lc.includes(p));
+            if (missingPhrases.length > 0) {
+              core.setFailed(`Vantar eftirfarandi spurningar í PR lýsingu: ${missingPhrases.join(", ")}`);
+              return;
+            }
+
+            // Hjálparfall: finna hvort einhver kostur sé hakaður ( - [x] eða - [X] )
+            function hasCheckedBox(sectionLabel) {
+              const idx = lc.indexOf(sectionLabel);
+              if (idx === -1) return false;
+              // Tökum bút frá spurningunni og aðeins nokkrar línur áfram (þar sem valkostirnir eru)
+              const snippet = body.slice(idx, idx + 600);
+              return /-\s*\[[xX]\]/.test(snippet);
+            }
+
+            // 2) Krefjumst þess að notandi hafi hakað í a.m.k. einn kost fyrir hvora spurningu
+            const checks = [
+              { label: "uppfyllir atriðið matskvarða", nice: "Uppfyllir atriðið matskvarða með verkefninu?" },
+              { label: "er textinn læsilegur og réttur", nice: "Er textinn læsilegur og réttur?" }
+            ];
+
+            const notChecked = checks.filter(c => !hasCheckedBox(c.label));
+
+            if (notChecked.length > 0) {
+              core.setFailed(
+                `Vinsamlegast hakkaðu í svarið fyrir: ${notChecked.map(c => `"${c.nice}"`).join(", ")}.`
+              );
+              return;
+            }
+
+            core.info("PR sjálfsmat í lagi ✅ (spurningar til staðar og a.m.k. eitt svar hakað við fyrir hvora spurningu)");
