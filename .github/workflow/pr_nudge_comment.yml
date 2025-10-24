@@ -14,7 +14,7 @@ jobs:
           script: |
             const pr = context.payload.pull_request;
             const body = (pr.body || "").toLowerCase();
-            const must = ["uppfyllir atriðið matskvarða", "er textinn læsilegur og réttur", "skrifaðu hvað má betur fara"];
+            const must = ["uppfyllir atriðið matskvarða", "er textinn læsilegur og réttur"];
             const missing = must.filter(k => !body.includes(k));
             if (missing.length === 0) return;
 
