@@ -7,9 +7,8 @@
 > - senda áminningu ef eitthvað vantar.
 >
 > 🔧 **Eftir að þú býrð til repo úr þessu sniðmáti**, vertu viss um að:
-> 1. Virkja **GitHub Actions** undir *Settings → Actions → General → Allow all actions*, og
-> 2. Setja „PR Quality Check“ sem *required check* undir *Settings → Branches*.
->
+> Virkja **GitHub Actions** undir *Settings → Actions → General → Allow all actions*, og
+
 > Sjá nánar leiðbeiningar neðst í þessari skrá.
 
 # Verkefni 5 — Gæðaeiginleikar (HBV301G)
@@ -60,81 +59,25 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 
 ## 🔧 Uppsetning eftir að þú býrð til repo úr sniðmáti
 
-Þetta sniðmát inniheldur sjálfvirkar athuganir og spurningar sem hjálpa þér að skila verkefni í góðu formi.
+Þetta sniðmát inniheldur sjálfvirkar athuganir og spurningar sem hjálpa þér að skila vönduðu verkefni
 Til að þær virki í þínu eigin repo þarftu að virkja þær í stillingum.
 
 ---
 
-### 🧩 1. Virkja GitHub Actions
+## PR-flæði 
+1. **Opna PR** → haka í:
+   - „Uppfyllir atriðið matskvarða…“
+   - „Er textinn læsilegur og réttur?“
+2. ✍️ **Skrifa „Hvað má betur fara“ í Comment** (1–3 atriði).
+3. **PR Quality Check** verður að vera **grænn** áður en má merge-a.
 
-1. Farið í **Settings → Actions → General**
-2. Skrunaðu niður að “Actions permissions”
-3. Veldu ✅ **Allow all actions and reusable workflows**
-4. Smelltu á **Save**
-
-Þetta gerir PR Quality Check og Nudge Comment workflow virkt.
-
----
-
-### 🧠 2. Sjálfvirkar athuganir (PR Quality Check)
-
-- Í hvert skipti sem þú opnar eða breytir Pull Request, keyrir athugun sem tryggir að þú hafir svarað
-  spurningum um gæði, læsileika og umbætur.
-- Ef eitthvað vantar eða er of stutt svar, birtist rauður ⚠️ *“PR Quality Check failed”* undir **Checks** flipanum.
-
-✅ **Ábending:** Bættu síðan við þessi skref í „Branch Protection Rules“ (ef þú mátt breyta stillingum repoins):
-
-1. Farið í **Settings → Branches → Add rule**
-2. Skrifaðu `main` undir “Branch name pattern”
-3. Merktu við:
-  - ✅ Require a pull request before merging
-  - ✅ Require status checks to pass before merging
-4. Undir “Status checks” veldu **PR Quality Check**
-5. Vistaðu.
-
-Þá má ekki sameina PR fyrr en checkið er grænt ✅.
+> Ef “PR Quality Check” vantar í lista yfir required checks:  
+> *Settings → Branches → Add rule → main → Require status checks → PR Quality Check.*
 
 ---
 
-### 🧾 3. PR form (sjálfmat og athugasemdir)
-
-Þegar þú býrð til nýtt **Pull Request**, opnast sjálfkrafa form sem spyr:
-- Uppfyllir atriðið matskvarða verkefnisins?
-- Er textinn læsilegur og réttur?
-- Hvað má betur fara?
-
-👉 Fylltu út þessi svör áður en þú sendir PR til yfirferðar.
-Ef þú gleymir því, þá skrifar GitHub-botinn sjálfkrafa áminningu í athugasemd.
-
----
-
-### 📊 4. Hvernig þetta lítur út í framkvæmd
-
-1. Búðu til nýja grein og breyttu einhverju (t.d. README).
-2. Opnaðu Pull Request.
-3. Svaraðu spurningunum í forminu.
-4. Skoðaðu flipann **Checks** — hann sýnir hvort PR Quality Check er í lagi.
-5. Ef rauður ⚠️ kemur upp → bættu við svör eða lengd texta og vistaðu PR aftur.
-
----
-
-### 💡 5. Ef eitthvað virkar ekki
-
-- Athugaðu að þú sért á **main** (eða aðal) grein áður en þú býrð til PR.
-- Farðu í **Actions** flipann — þar sérðu hvort workflow keyrir eða hvort það hefur verið stöðvað.
-- Ef það segir *“Workflow runs are disabled for this repository”* → þá þarftu að virkja Actions eins og í skrefi 1.
-
----
-
-### ✅ Samantekt
-
-| Skref | Tilgangur | Hvar | 
-|-------|------------|------|
-| 1️⃣ Virkja Actions | Leyfa workflow keyrslur | Settings → Actions → General |
-| 2️⃣ Stilla Branch Protection | Tryggja að PR sé grænt áður en merge | Settings → Branches |
-| 3️⃣ Fylla út PR form | Sjálfsmat á gæðum og umbótum | Pull Request skref |
-| 4️⃣ Fylgjast með Checks | Sjá hvort athuganir standist | Pull Request → Checks |
-
----
+## Fljót uppsetning (fyrir repo úr sniðmáti)
+1. *Settings → Actions → General* → **Allow all actions and reusable workflows**.  
+2. *(Valkv.)* *Settings → Branches* → setja **PR Quality Check** sem required.
 
 ---
