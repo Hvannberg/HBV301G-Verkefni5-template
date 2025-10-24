@@ -13,14 +13,26 @@ jobs:
         with:
           script: |
             const pr = context.payload.pull_request;
+
+            // Ekki nudga ef PR er draft
+            if (pr.draft) return;
+
             const body = (pr.body || "").toLowerCase();
+
+            // Leitum bara að þessum tveimur spurningum í PR-lýsingunni
             const must = ["uppfyllir atriðið matskvarða", "er textinn læsilegur og réttur"];
             const missing = must.filter(k => !body.includes(k));
+
             if (missing.length === 0) return;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
-              body: `👋 Hæ ${pr.user.login}!\nVinsamlegast fylltu út PR formið alveg.\nVantar: **${missing.join(", ")}**.\nÞetta er nauðsynlegt svo PR geti farið í gegn. 🙏`
+              body: [
+                `👋 Hæ ${pr.user.login}!`,
+                `Vinsamlegast fylltu út PR sjálfsmat í lýsingunni (vantar: **${missing.join(", ")}**).`,
+                ``,
+                `💬 Mundu einnig að skrifa **Hvað má betur fara** í *Comment*-sviðinu hér fyrir neðan.`,
+              ].join('\n')
             });
