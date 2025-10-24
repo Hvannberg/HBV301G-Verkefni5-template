@@ -1,4 +1,4 @@
-# PR – stutt sjálfsmat
+# Pull Request  – stutt sjálfsmat
 
 **Uppfyllir atriðið matskvarða með verkefninu?**  
 - [ ] Já  
