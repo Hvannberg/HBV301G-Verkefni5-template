@@ -37,7 +37,7 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 - `templates/PLANGUAGE.md` — Sniðmát fyrir eina gæðakröfu skrifaða með **PLanguage** samkvæmt kafla 14 í *Wiegers & Beatty*. |
 - `docs/glossary.md` — *(valfrjálst)* orðasafn hugtaka.
 
-## Hvernig á að vinna verkefnið með þessu repo-i 
+## Ferli fyrir verkefnið 
 
 > Hvernig unnuð þið verkefnið | eyðið út leiðbeiningum kennara 
 
