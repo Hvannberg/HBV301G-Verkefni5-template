@@ -1,15 +1,3 @@
-test 7
-> 💡 **ATHUGIÐ:**  
-> Þetta sniðmát (template) inniheldur sjálfvirkar gæðaskoðanir (GitHub Actions) sem keyra þegar þú opnar **Pull Request (PR)**.  
-> Þær:
-> - sýna form þar sem þú metur eigin innsendingu (t.d. „Uppfyllir atriðið matskvarða?“ og „Hvað má betur fara?“),
-> - athuga að svör séu til staðar og nægilega ítarleg áður en PR má samþykkja,
-> - senda áminningu ef eitthvað vantar.
->
-> 🔧 **Eftir að þú býrð til repo úr þessu sniðmáti**, vertu viss um að:
-> Virkja **GitHub Actions** undir *Settings → Actions → General → Allow all actions*, og
-
-> Sjá nánar leiðbeiningar neðst í þessari skrá.
 
 # Verkefni 5 — Gæðaeiginleikar (HBV301G)
 
@@ -56,28 +44,3 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 > Ath.: Þetta er *leiðbeinandi* dæmi. Notið eigin tölur/forsendur.
 > 
 > ---
-
-## 🔧 Uppsetning eftir að þú býrð til repo úr sniðmáti
-
-Þetta sniðmát inniheldur sjálfvirkar athuganir og spurningar sem hjálpa þér að skila vönduðu verkefni
-Til að þær virki í þínu eigin repo þarftu að virkja þær í stillingum.
-
----
-
-## PR-flæði 
-1. **Opna PR** → haka í:
-   - „Uppfyllir atriðið matskvarða…“
-   - „Er textinn læsilegur og réttur?“
-2. ✍️ **Skrifa „Hvað má betur fara“ í Comment** (1–3 atriði).
-3. **PR Quality Check** verður að vera **grænn** áður en má merge-a.
-
-> Ef “PR Quality Check” vantar í lista yfir required checks:  
-> *Settings → Branches → Add rule → main → Require status checks → PR Quality Check.*
-
----
-
-## Fljót uppsetning (fyrir repo úr sniðmáti)
-1. *Settings → Actions → General* → **Allow all actions and reusable workflows**.  
-2. *(Valkv.)* *Settings → Branches* → setja **PR Quality Check** sem required.
-
----
