@@ -11,8 +11,10 @@ Setjið ykkar eigin texta um **verkefnið ykkar** og takið út eða aðlagið t
 
 
 ## Yfirlit 
-> Setjið hér eigin texta um verkefnið ykkar og eyðið út leiðbeiningum kennara til ykkar
-> --
+
+>
+> Setjið hér eigin texta um verkefnið ykkar   eyðið út leiðbeiningum kennara 
+
 
 Í þessu verkefni veljið þið **5 ytri** (external) og **3 innri** (internal) gæðaeiginleika fyrir kerfið ykkar (úr Verkefni 1 eða nýtt kerfi).  
 Fyrir **hvern** eiginleika:
@@ -25,6 +27,9 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 - Rökstyðjið **forgangsröðun**: hvor fær að ganga fyrir og af hverju.
 
 ## Möppur & skráauppsetning
+
+> Hvaða skrár eru í ykkar repo-i | eyðið út leiðbeiningum kennara 
+
 - `answers/quality-attributes.md` — allar 8 kröfurnar (5 ytri, 3 innri).
 - `answers/conflicts.md` — 3 árekstrapör + rök.
 - `templates/QUALITY_ATTRIBUTE.md` — endurnýtið fyrir hvern gæðaeiginleika.
@@ -33,6 +38,9 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 - `docs/glossary.md` — *(valfrjálst)* orðasafn hugtaka.
 
 ## Hvernig á að vinna verkefnið með þessu repo-i 
+
+> Hvernig unnuð þið verkefnið | eyðið út leiðbeiningum kennara 
+
 1. Opnið sniðmát í `templates/`.
 2. Afritið (copy) og límið í `answers/quality-attributes.md` eða búið til sérskrár ef óskað er.
 4. Gerið commit /push með skýrum skilaboðum.
