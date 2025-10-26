@@ -10,7 +10,10 @@ Setjið ykkar eigin texta um **verkefnið ykkar** og takið út eða aðlagið t
 ## Hópmeðlimir 
 
 
-## Yfirlit
+## Yfirlit 
+> Setjið hér eigin texta um verkefnið ykkar og eyðið út leiðbeiningum kennara til ykkar
+> --
+
 Í þessu verkefni veljið þið **5 ytri** (external) og **3 innri** (internal) gæðaeiginleika fyrir kerfið ykkar (úr Verkefni 1 eða nýtt kerfi).  
 Fyrir **hvern** eiginleika:
 - Skrifið **1 gæðakröfu** 
@@ -21,7 +24,7 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 - Lýsið í **2–3 setningum** mögulegum **árekstri** milli þeirra.
 - Rökstyðjið **forgangsröðun**: hvor fær að ganga fyrir og af hverju.
 
-## Mappa & skráauppsetning
+## Möppur & skráauppsetning
 - `answers/quality-attributes.md` — allar 8 kröfurnar (5 ytri, 3 innri).
 - `answers/conflicts.md` — 3 árekstrapör + rök.
 - `templates/QUALITY_ATTRIBUTE.md` — endurnýtið fyrir hvern gæðaeiginleika.
@@ -35,6 +38,5 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 4. Gerið commit /push með skýrum skilaboðum.
 5. Samstarfsnemandinn á að rýna pull request og skrifa athugasemdir 
 
-> Ath.: Þetta er *leiðbeinandi* dæmi. Notið eigin tölur/forsendur.
-> 
+ 
 > ---
