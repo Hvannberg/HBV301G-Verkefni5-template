@@ -32,14 +32,8 @@ Veljið síðan **3 pör** úr þessum eiginleikum:
 ## Hvernig á að vinna verkefnið með þessu repo-i 
 1. Opnið sniðmát í `templates/`.
 2. Afritið (copy) og límið í `answers/quality-attributes.md` eða búið til sérskrár ef óskað er.
-3. Fyllið út. Notið **kerfissértækar** forsendur (notendafjölda, tengingar, rekstrarumhverfi o.s.frv.).
 4. Gerið commit /push með skýrum skilaboðum.
 5. Samstarfsnemandinn á að rýna pull request og skrifa athugasemdir 
-
-## Dæmi — ein stutt færsla
-**Gæðaeiginleiki (ytri):** Afköst (Performance)  
-**Krafa (óformleg):** Kerfið skal svara vefbeiðnum á innan við 500 ms að meðaltali undir venjulegu álagi.  
-**Rök/forsendur (2–3 setn.):** Notendur hætta við aðgerðir ef bið > 1s. Við reiknum með allt að 300 samhliða notendum í hámarki; CDN og gagnagrunnsbætur styðja markið.
 
 > Ath.: Þetta er *leiðbeinandi* dæmi. Notið eigin tölur/forsendur.
 > 
